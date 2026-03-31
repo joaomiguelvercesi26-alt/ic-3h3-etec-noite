@@ -1,12 +1,14 @@
 import os
 
-from flask import Flask, send_file
+from flask import Flask, send_file, render_templates
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return send_file('src/index.html')
+    l = "Leitura: Temperatura"
+    return send_file('src/templates/index.html')
+
 
 @app.route("/contato")
 def contato():
